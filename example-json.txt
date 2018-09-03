@@ -1,0 +1,27 @@
+let products = [
+    {
+        name: 'Kostia',
+        id: 1
+    },
+    {
+        name: 'Rower',
+        id: 2
+    }
+];
+
+let lastInsertId = 2;
+
+// router.get('/', (req, res, next) => {
+//     res.status(200).json(products);
+// });
+
+// router.get('/:productID', (req, res, next) =>{
+//     const id = parseInt(req.params.productID);
+
+
+
+// for(var i = 0; i < products.length; i++){
+//     if( products[i].id === id ){
+//         res.status(200).json(products[i]);
+//     }
+// }
