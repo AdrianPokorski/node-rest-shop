@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-var fs = require('fs');
-var obj = JSON.parse(fs.readFileSync('./api/users/user.json', 'utf8'));
+const fs = require('fs');
+const obj = JSON.parse(fs.readFileSync('./api/users/user.json', 'utf8'));
 
 
 const connection = new Sequelize('nodetest','root','admin',{
@@ -15,6 +15,9 @@ const User = connection.define('user', {
     },
     lastName: {
         type: Sequelize.STRING
+    },
+    email: {
+        type: Sequelize.STRING
     }
 });
 
@@ -25,7 +28,8 @@ User.sync({force: true}).then(() => {
 
         User.create({
             firstName: obj[i].firstName,
-            lastName: obj[i].lastName
+            lastName: obj[i].lastName,
+            email: obj[i].email
         });
 
     }

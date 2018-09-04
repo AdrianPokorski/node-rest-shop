@@ -1,18 +1,48 @@
 [
-{
-    "firstName": "Joe",
-    "lastName": "Smith"
-},
-{
-    "firstName": "Monika",
-    "lastName": "Kowalska"
-},
-{
-    "firstName": "Ryszard",
-    "lastName": "Rynkowski"
-},
-{
-    "firstName": "Krzysztof",
-    "lastName": "Krawczyk"
-}
+    {
+        "firstName": "Joe",
+        "lastName": "Smith",
+        "email": "smith@smith.pl"
+    },
+    {
+        "firstName": "Monika",
+        "lastName": "Kowalska",
+        "email": "kowal@kowal.pl"
+    },
+    {
+        "firstName": "Ryszard",
+        "lastName": "Rynkowski",
+        "email": "rynek@rynek.pl"
+    },
+    {
+        "firstName": "Krzysztof",
+        "lastName": "Krawczyk",
+        "email": "krawczyk@krawczyk.pl"
+    },
+    {
+        "firstName": "Monika",
+        "lastName": "Broda",
+        "email": "broda@broda.pl"
+    },
+    {
+        "firstName": "Will",
+        "lastName": "Wesley",
+        "email": "wesley@wesley.pl"
+    },
+    {
+        "firstName": "Kostia",
+        "lastName": "Daniuk",
+        "email": "daniuk@daniuk.pl"
+    },
+    {
+        "firstName": "Jan",
+        "lastName": "Jarecki",
+        "email": "jarecki@jarecki.pl"
+    },
+    {
+        "firstName": "kuba",
+        "lastName": "kubicki",
+        "email": "kubek@jarecki.pl"
+    }
+
 ]
