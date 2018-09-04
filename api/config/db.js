@@ -3,7 +3,7 @@ var fs = require('fs');
 var obj = JSON.parse(fs.readFileSync('./api/users/user.json', 'utf8'));
 
 
-const connection = new Sequelize('nodetest','root','',{
+const connection = new Sequelize('nodetest','root','admin',{
     host:'localhost',
     dialect:'mysql'
 });
@@ -19,17 +19,18 @@ const User = connection.define('user', {
 });
 
 
-for(var i = 0; i < obj.length; i++){
-    User.sync({force: true}).then(() => {
-        // Table created
+User.sync({force: true}).then(() => {
 
-        return User.create({
-            firstName: obj[0].firstName,
-            lastName: obj[0].lastName
+    for(var i = 0; i < obj.length; i++){
+
+        User.create({
+            firstName: obj[i].firstName,
+            lastName: obj[i].lastName
         });
-    });
 
-}
+    }
+
+});
 
 
 module.exports = connection;
