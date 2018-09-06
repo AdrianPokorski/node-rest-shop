@@ -6,9 +6,8 @@ const cors = require('cors');
 const connection = require('./app/db/connection.js');
 const productRoutes = require('./app/routes/products');
 const importRoutes = require('./app/routes/import');
-const createUser = require('./app/routes/createuser');
 const orderRoutes = require('./app/routes/orders');
-const allUsersRoutes = require('./app/routes/allusers');
+const allUsersRoutes = require('./app/routes/users.js');
 
 connection.sync();
 
@@ -19,7 +18,6 @@ app.use(cors());
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
 app.use('/import', importRoutes);
-app.use('/createuser', createUser);
-app.use('/allusers', allUsersRoutes);
+app.use('/users', allUsersRoutes);
 
 module.exports = app;

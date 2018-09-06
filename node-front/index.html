@@ -5,19 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
 </head>
 <body>
-    <h1>Dodaj użytkownika do bazy:</h1>
-    <form id="form" action="">
-        <input  class="input-name" type="text" name="firstName" placeholder="imie"><br>
-        <input  class="input-surname" type="text" name="lastName" placeholder="nazwisko"><br>
-        <input  class="input-email" type="text" name="email" placeholder="email"><br>
-        <button>Dodaj</button>
-    </form>
-    <h1>Lista Użytkowników w bazie:</h1>
-    <div id="usersDB">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Dodaj użytkownika do bazy:</h1>
+                <form id="form" action="">
+                    <input  class="input-name my-1" style="width: 30%;" type="text" name="firstName" placeholder="imie"><br>
+                    <input  class="input-surname my-1" style="width: 30%;" type="text" name="lastName" placeholder="nazwisko"><br>
+                    <input  class="input-email my-1" style="width: 30%;" type="text" name="email" placeholder="email"><br>
+                    <button type="submit" class="btn btn-primary mt-3">Dodaj</button>
+                </form>
+            </div>
+            <div class="col-12 text-center mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>Znajdź</h1>
+                        </div>
+                        <input type="text" name="finduser" placeholder="Wpisz imię">
+                        <div class="find-result"></div>
+                    </div>
+                </div> 
+            <div class="col-12 text-center mt-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Lista Użytkowników w bazie:</h1>
+                    </div>
+                    <ul class="list-group list-group-flush"></ul>
+                </div>
+            </div>      
+        </div>
     </div>
+
+    
     
 
 </body>
