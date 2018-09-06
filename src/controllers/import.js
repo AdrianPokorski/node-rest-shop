@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const fs = require('fs');
-const obj = JSON.parse(fs.readFileSync('./app/users/user.json', 'utf8'));
+const obj = JSON.parse(fs.readFileSync('./src/users/user.json', 'utf8'));
 const User = require('../db/userModel.js');
 
 router.get('/', (req, res, next) => {

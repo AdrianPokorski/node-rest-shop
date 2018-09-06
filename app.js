@@ -3,11 +3,11 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const connection = require('./app/db/connection.js');
-const productRoutes = require('./app/routes/products');
-const importRoutes = require('./app/routes/import');
-const orderRoutes = require('./app/routes/orders');
-const allUsersRoutes = require('./app/routes/users.js');
+const connection = require('./src/config/connection.js');
+const productRoutes = require('./src/controllers/products');
+const importRoutes = require('./src/controllers/import');
+const orderRoutes = require('./src/controllers/orders');
+const allUsersRoutes = require('./src/controllers/users.js');
 
 connection.sync();
 
