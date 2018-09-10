@@ -4,7 +4,7 @@ const User = require('../db/userModel.js');
 
 router.get('/', (req, res, next) => {
 
-    let usersData = User.findAll({  }).then(response => {
+    User.findAll({  }).then(response => {
         res.status(200).send(response)
     });
 
@@ -12,8 +12,8 @@ router.get('/', (req, res, next) => {
 
 router.get('/:id', (req, res, next) => {
 
-    User.findOne({ where: {id: req.params.id } }).then(findresponse => {
-        res.status(200).send(findresponse);
+    User.findOne({ where: {id: req.params.id } }).then(User => {
+        res.status(200).send(User);
       });
 
 });
